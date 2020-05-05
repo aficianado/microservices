@@ -1,5 +1,3 @@
 FROM openjdk:8-jdk-alpine
-VOLUME /tmp
-ADD target/*.jar app.jar
-ENV JAVA_OPTS="
-ENTRYPOINT [ "sh", "-c", "java -jar /app.jar" ]
+ADD target/user-post-service-0.0.1-SNAPSHOT.jar user-post-service-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar", "user-post-service-0.0.1-SNAPSHOT.jar"]
